@@ -14,7 +14,9 @@ client.connect();
 console.log("Mongodb connected...");
 
 app.use(express.json());
-app.use(cors({origin: "http://localhost:3000", credentials: true}));
+app.use(
+  cors({ origin: "https://mentor-student.netlify.app", credentials: true })
+);
 
 
 app.use("/API", studentRouter);
